@@ -52,6 +52,7 @@ public class Ecuacion{
         if(this.unaRaiz()) {
 
             sol.setRaiz1( (-b + Math.pow( this.discriminante() , 0.5) )/ (2*a) );
+            sol.setRaiz2( sol.getRaiz1() );
         } else if (this.dosRaiz()) {
             sol.setRaiz1( (-b + Math.pow( this.discriminante() , 0.5) )/ (2*a) );
             sol.setRaiz2( (-b - Math.pow( this.discriminante() , 0.5) )/ (2*a) );
