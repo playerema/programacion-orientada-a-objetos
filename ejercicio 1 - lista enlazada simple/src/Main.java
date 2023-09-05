@@ -43,6 +43,8 @@ public class Main {
         l.eliminar(n);
 
         l.mostrar();
+
+        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.esVacia());
     }
 
 }
