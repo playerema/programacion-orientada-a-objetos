@@ -20,7 +20,7 @@ public class Libro {
     private Integer paginas;
     private Integer año;
     private Integer numEjemplares;
-    private Integer numEjemplaresPrestados;
+    private Integer numEjemplaresPrestados=0;
 
     //CONSTRUCTOR
     public Libro(String titulo,String autor,Integer paginas,Integer año,Integer numEjemplares,String isbn){
@@ -50,21 +50,33 @@ public class Libro {
 
     public String getAutor(){return this.autor;}
 
-    public void prestar(){
-        if (numEjemplares>0) {
+    public Integer getPaginas(){return paginas;}
+    public boolean prestar(){
+        boolean b=false;
+        if (numEjemplares>1) {
             numEjemplares--;
             numEjemplaresPrestados++;
+            b=true;
         }else{
             System.out.println("No hay ejemplares disponibles para prestar.");
         }
+        return b;
     }
 
     public int getNumEjemplaresPrestados() {
         return numEjemplaresPrestados;
     }
 
-    public void devolver(){}
-
+    public boolean devolver(){
+        boolean b= false;
+        if(numEjemplaresPrestados>1){
+            numEjemplares++;
+            numEjemplaresPrestados--;
+            b=true;
+        }else{
+            System.out.println("no hay ejemplares prestados");
+        }
+        return b;
     }
 
-}
+    }

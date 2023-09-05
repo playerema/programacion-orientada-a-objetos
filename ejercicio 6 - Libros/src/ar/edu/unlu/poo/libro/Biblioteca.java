@@ -6,7 +6,7 @@ public class Biblioteca {
     public ArrayList<Libro> libros =new ArrayList<>();
 
     public Libro buscarAutor(String autor){
-        Libro l;
+        Libro l=new Libro("","",0,0,0);
 
         for(int i=0;i<libros.size();i++){
             if(libros.get(i).getAutor().equals(autor)){
@@ -18,7 +18,7 @@ public class Biblioteca {
     }
 
     public Libro buscarTitulo(String titulo){
-        Libro l;
+        Libro l=new Libro("","",0,0,0);
 
         for(int i=0;i<libros.size();i++){
             if(libros.get(i).getTitulo().equals(titulo)){
@@ -30,7 +30,7 @@ public class Biblioteca {
     }
 
     public boolean prestar(Libro l){
-
+        return l.prestar();
     }
 
     public Integer cantPrestamos(){return 0;}
