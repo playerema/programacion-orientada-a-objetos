@@ -78,7 +78,7 @@ public class Password {
 
     public int getlongitud(){return longitud;};
 
-    public String getcontraseña(){return contraseña;};
+    public String getContraseña(){return contraseña;};
 
 
 }

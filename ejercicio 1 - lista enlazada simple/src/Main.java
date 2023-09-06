@@ -8,7 +8,7 @@ public class Main {
         ListaEnlazada l = new ListaEnlazada();
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.esVacia());
+        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.estaVacia());
 
         System.out.print("PROBANDO METODO AGREGAR");
 
@@ -44,7 +44,7 @@ public class Main {
 
         l.mostrar();
 
-        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.esVacia());
+        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.estaVacia());
     }
 
 }

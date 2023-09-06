@@ -1,5 +1,4 @@
 import ar.edu.unlu.pila.ClasePila;
-import ar.edu.unlu.pila.MiObjeto;
 
 import java.util.Scanner;
 
@@ -10,7 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Integer n = 0;
 
-        System.out.println("se creo la pila p con longitud = " + p.longitud() + " y vacio = " + p.esvacio());
+        System.out.println("se creo la pila p con longitud = " + p.longitud() + " y vacio = " + p.estaVacio());
 
         System.out.println("PRUEBA DEL METODO APILAR");
         System.out.print("ingrese la cantidad de elementos a apilar: ");
@@ -31,6 +30,6 @@ public class Main {
         System.out.println();
         p.mostrar();
 
-        System.out.println("la pila p tiene la longitud = " + p.longitud() + " y vacio = " + p.esvacio());
+        System.out.println("la pila p tiene la longitud = " + p.longitud() + " y vacio = " + p.estaVacio());
     }
 }

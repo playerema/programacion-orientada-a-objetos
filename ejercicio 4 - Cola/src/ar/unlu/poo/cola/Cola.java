@@ -4,13 +4,13 @@ public class Cola {
     private Nodo primero = null;
     private Nodo ultimo = null;
 
-    public boolean esvacio(){
+    public boolean estaVacio(){
         return primero==null;
     }
 
     public int longitud(){
         int n=0;
-        if(this.esvacio()){
+        if(this.estaVacio()){
             return n;
         }else{
             Cola c = new Cola();
@@ -18,11 +18,11 @@ public class Cola {
             do{
                 n++;
                 c.encolar(this.desencolar());
-            }while(!this.esvacio());
+            }while(!this.estaVacio());
 
             do{
                 this.encolar(c.desencolar());
-            }while(!c.esvacio());
+            }while(!c.estaVacio());
         }
         return n;
     }
@@ -31,7 +31,7 @@ public class Cola {
         Nodo nuevoNodo = new Nodo();
         nuevoNodo.setdato(dato);
 
-        if (this.esvacio()){
+        if (this.estaVacio()){
             primero = nuevoNodo;
             ultimo = nuevoNodo;
         } else {
@@ -41,14 +41,14 @@ public class Cola {
     }
 
     public Object desencolar(){
-        if (this.esvacio()) {
+        if (this.estaVacio()) {
             return null;
         }
 
         Object dato = primero.getdato();
         primero = primero.getproximo();
 
-        if (this.esvacio()){
+        if (this.estaVacio()){
             ultimo = null;
         }
 
@@ -56,7 +56,7 @@ public class Cola {
     }
 
     public Object recuperar(){
-        if (this.esvacio()) {
+        if (this.estaVacio()) {
             return null;
         }
         return primero.getdato();

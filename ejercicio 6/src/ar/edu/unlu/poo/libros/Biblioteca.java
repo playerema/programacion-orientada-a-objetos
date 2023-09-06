@@ -26,4 +26,26 @@ public class Biblioteca {
         }
         return resultado;
     }
+
+    public void agregarLibro(String titulo,String autor,Integer paginas,Integer anio,String isbn){
+        Libro l = new Libro(titulo,autor,paginas,anio,isbn);
+
+    }
+
+    public void agregarLibro(String titulo,String autor,Integer paginas,Integer anio){
+        Libro l = new Libro(titulo,autor,paginas,anio);
+    }
+
+    public void prestar(Libro libro){
+        libro.prestar();
+    }
+
+    public void prestar(Ejemplar ejemplar){
+        ejemplar.getLibro().prestar(ejemplar);
+    }
+
+    public void devolver(Ejemplar ejemplar){
+        ejemplar.getLibro().devolver(ejemplar);
+    }
 }
+

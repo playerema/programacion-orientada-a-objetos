@@ -9,7 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
 
-        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.esVacia());
+        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.estaVacia());
 
         System.out.println("PROBANDO METODO AGREGAR");
 
@@ -23,7 +23,7 @@ public class Main {
             l.agregar(sc.nextInt());
         }
         l.mostrar();
-        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.esVacia());
+        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.estaVacia());
         System.out.println("PRUEBA DE METODO INSERTAR");
 
         System.out.print("ingrese el numero a añadir: ");
@@ -32,7 +32,7 @@ public class Main {
         l.insertar(n,sc.nextInt());
 
         l.mostrar();
-        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.esVacia());
+        System.out.println("la lista l tiene una longiud = " + l.longitud() + " y vacia = " + l.estaVacia());
         System.out.println("PRUEBA DE METODO RECUPERAR");
         System.out.print("ingrese un numero de indice a recuperar: ");
         n = sc.nextInt();

@@ -4,7 +4,7 @@ public class ListaEnlazada {
     Nodo inicio = null;
 
     /*Consultar si la lista está vacía.*/
-    public boolean esVacia(){return inicio==null;}
+    public boolean estaVacia(){return inicio==null;}
 
     /*Consultar la longitud de la lista.*/
     public int longitud(){
@@ -23,7 +23,7 @@ public class ListaEnlazada {
     public void agregar(Object dato) {
         Nodo nuevoNodo = new Nodo(dato);
 
-        if (this.esVacia()){
+        if (this.estaVacia()){
 
             inicio = nuevoNodo;
         }else{
@@ -40,7 +40,7 @@ public class ListaEnlazada {
 
     /*Eliminar elemento de la lista.*/
     public void eliminar(Object dato) {
-        if (this.esVacia()) {
+        if (this.estaVacia()) {
             return;
         }
 

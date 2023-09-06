@@ -7,12 +7,12 @@ public class ClasePila {
     //metodos
 
     //EsVacio: comprueba sí la propia pila este vacía +++
-    public boolean esvacio(){
+    public boolean estaVacio(){
         return tope==null;
     }
 
     public int longitud(){
-        if (this.esvacio()) {
+        if (this.estaVacio()) {
             return 0;
         }else{
             ClasePila aux = new ClasePila();
@@ -23,13 +23,13 @@ public class ClasePila {
                 Nodo naux = new Nodo(this.desapilar());
                 aux.apilar(naux);
 
-            }while (!this.esvacio());
+            }while (!this.estaVacio());
 
             do{
                 Nodo naux = new Nodo(aux.desapilar());
                 this.apilar(naux);
 
-            }while (!aux.esvacio());
+            }while (!aux.estaVacio());
             return n;
         }
     }
@@ -39,7 +39,7 @@ public class ClasePila {
         Nodo nodo = new Nodo();
         nodo.setdato(obj);
 
-        if (this.esvacio()){
+        if (this.estaVacio()){
             this.tope = nodo;
         }else{
             Nodo naux = this.tope;//establece un nodo auxiliar y almacena el tope
@@ -50,7 +50,7 @@ public class ClasePila {
 
     //Desapilar: quita el elemento de la cima de la Pila +++
      public Object desapilar(){
-        if (this.esvacio()){
+        if (this.estaVacio()){
             return null;
         }
 
@@ -62,7 +62,7 @@ public class ClasePila {
     //Tope: devuelve la information de un nodo +++
     public Object recuperar(){
 
-        if (!this.esvacio()){return this.tope.getdato();}
+        if (!this.estaVacio()){return this.tope.getdato();}
         else{return null;}
     }
 
@@ -70,7 +70,7 @@ public class ClasePila {
     public void mostrar(){
         System.out.println("mostrando lista:");
 
-        if (this.esvacio()) {
+        if (this.estaVacio()) {
             System.out.println("Lista Vacia");
 
         }else{
@@ -82,13 +82,13 @@ public class ClasePila {
                 System.out.println(naux.getdato());
                 aux.apilar(naux);
 
-            }while (!this.esvacio());
+            }while (!this.estaVacio());
 
             do{
                 Nodo naux = new Nodo(aux.desapilar());
                 this.apilar(naux);
 
-            }while (!aux.esvacio());
+            }while (!aux.estaVacio());
         }
         System.out.println();
     }

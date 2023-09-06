@@ -3,7 +3,7 @@ package ar.edu.unle.poo.listaenlazadadoble;
 public class ListaEnlazadaDoble {
     private Nodo inicio;
 
-    public boolean esVacia(){
+    public boolean estaVacia(){
         return inicio ==null;
     }
     public int  longitud(){
@@ -22,7 +22,7 @@ public class ListaEnlazadaDoble {
     public void agregar(Object datos) {
         Nodo nuevoNodo = new Nodo(datos);
 
-        if (this.esVacia()) {
+        if (this.estaVacia()) {
             inicio = nuevoNodo;
         } else {
             Nodo nodoActual = inicio;

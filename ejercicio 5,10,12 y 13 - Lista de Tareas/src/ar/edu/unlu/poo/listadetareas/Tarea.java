@@ -178,7 +178,12 @@ public class Tarea {
         return this.colaborador;
     }
 
+    public void setColaborador(String colaborador){this.colaborador=colaborador;}
+
     public LocalDate getLimite() {
         return limite;
     }
+
+    public void setLimite(LocalDate limite){this.limite=limite;}
+
 }

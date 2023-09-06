@@ -21,7 +21,7 @@ public class Main {
         }
 
         for(int i=0;i<n;i++){
-            System.out.println(contraseña[i].getcontraseña() + "-" + contraseña[i].fuerte());
+            System.out.println(contraseña[i].getContraseña() + "-" + contraseña[i].fuerte());
         }
     }
 }

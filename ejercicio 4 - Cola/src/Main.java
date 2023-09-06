@@ -9,7 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Integer n = 0;
 
-        System.out.println("se creo la cola c con longitud = "+c.longitud()+" y vacio = " + c.esvacio());
+        System.out.println("se creo la cola c con longitud = "+c.longitud()+" y vacio = " + c.estaVacio());
 
         System.out.println("PRUEBA DEL METODO ENCOLAR");
         System.out.println("ingrese la cantidad de nodos a apilar: ");
@@ -30,7 +30,7 @@ public class Main {
         c.desencolar();
         c.mostrar();
 
-        System.out.println("cola c tiene longitud = "+c.longitud()+" y vacio = " + c.esvacio());
+        System.out.println("cola c tiene longitud = "+c.longitud()+" y vacio = " + c.estaVacio());
 
     }
 }

@@ -1,12 +1,15 @@
 package ar.edu.unlu.poo.libros;
 
 public class Ejemplar {
+
     private Integer nro;
-    private boolean estadoPrestamo = true;
-
-    public void setEstadoPrestamo(boolean estadoPrestamo) {
-        this.estadoPrestamo = estadoPrestamo;
+    private Libro libro;
+    private boolean prestado = false;
+    public void setPrestado() {
+        this.prestado = !this.prestado;
     }
+    public boolean getPrestado(){return prestado;}
 
-    public boolean getEstadoPrestamo(){return estadoPrestamo;}
+    public void setLibro(Libro libro){this.libro=libro;}
+    public Libro getLibro(){return this.libro;}
 }
