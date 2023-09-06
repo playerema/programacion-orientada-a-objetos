@@ -19,31 +19,31 @@ public class Libro {
     private String isbn;
     private Integer paginas;
     private Integer año;
-    private Integer numEjemplares;
-    private Integer numEjemplaresPrestados=0;
+    private Integer numeroDeEjemplares;
+    private Integer numeroDeEjemplaresPrestados =0;
 
     //CONSTRUCTOR
-    public Libro(String titulo,String autor,Integer paginas,Integer año,Integer numEjemplares,String isbn){
+    public Libro(String titulo,String autor,Integer paginas,Integer año,Integer numeroDeEjemplares,String isbn){
         this.titulo=titulo;
         this.autor=autor;
         this.paginas=paginas;
         this.año=año;
         this.isbn=isbn;
-        this.numEjemplares=numEjemplares;
+        this.numeroDeEjemplares =numeroDeEjemplares;
     }
 
-    public Libro(String titulo,String autor,Integer paginas,Integer año,Integer numEjemplares){
+    public Libro(String titulo,String autor,Integer paginas,Integer año,Integer numeroDeEjemplares){
         this.titulo=titulo;
         this.autor=autor;
         this.paginas=paginas;
         this.año=año;
-        this.numEjemplares=numEjemplares;
+        this.numeroDeEjemplares =numeroDeEjemplares;
 
     }
 
     //METODOS
     public String getDescripcion() {
-        return "El libro " + titulo + " creado por el autor " + autor + " tiene " + paginas + " páginas, quedan " + numEjemplares + " disponibles y se prestaron " + numEjemplaresPrestados + ".";
+        return "El libro " + titulo + " creado por el autor " + autor + " tiene " + paginas + " páginas, quedan " + numeroDeEjemplares + " disponibles y se prestaron " + numeroDeEjemplaresPrestados + ".";
     }
 
     public String getTitulo(){return this.titulo;}
@@ -53,9 +53,9 @@ public class Libro {
     public Integer getPaginas(){return paginas;}
     public boolean prestar(){
         boolean b=false;
-        if (numEjemplares>1) {
-            numEjemplares--;
-            numEjemplaresPrestados++;
+        if (numeroDeEjemplares >1) {
+            numeroDeEjemplares--;
+            numeroDeEjemplaresPrestados++;
             b=true;
         }else{
             System.out.println("No hay ejemplares disponibles para prestar.");
@@ -63,15 +63,15 @@ public class Libro {
         return b;
     }
 
-    public int getNumEjemplaresPrestados() {
-        return numEjemplaresPrestados;
+    public int getNumeroDeEjemplaresPrestados() {
+        return numeroDeEjemplaresPrestados;
     }
 
     public boolean devolver(){
         boolean b= false;
-        if(numEjemplaresPrestados>1){
-            numEjemplares++;
-            numEjemplaresPrestados--;
+        if(numeroDeEjemplaresPrestados >1){
+            numeroDeEjemplares++;
+            numeroDeEjemplaresPrestados--;
             b=true;
         }else{
             System.out.println("no hay ejemplares prestados");

@@ -25,6 +25,6 @@ public class Main {
         System.out.println("Intentando prestar el Libro 2:");
         libro2.prestar();
 
-        System.out.println("Cantidad total de préstamos realizados: " + (libro1.getNumEjemplaresPrestados() + libro2.getNumEjemplaresPrestados()));
+        System.out.println("Cantidad total de préstamos realizados: " + (libro1.getNumeroDeEjemplaresPrestados() + libro2.getNumeroDeEjemplaresPrestados()));
     }
 }

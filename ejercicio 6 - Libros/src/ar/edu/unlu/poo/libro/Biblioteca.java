@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Biblioteca {
     public ArrayList<Libro> libros =new ArrayList<>();
 
-    public Libro buscarAutor(String autor){
+    public Libro buscarPorAutor(String autor){
         Libro l=new Libro("","",0,0,0);
 
         for(int i=0;i<libros.size();i++){
@@ -17,7 +17,7 @@ public class Biblioteca {
         return l;
     }
 
-    public Libro buscarTitulo(String titulo){
+    public Libro buscarPorTitulo(String titulo){
         Libro l=new Libro("","",0,0,0);
 
         for(int i=0;i<libros.size();i++){
@@ -33,9 +33,6 @@ public class Biblioteca {
         return l.prestar();
     }
 
-    public Integer cantPrestamos(){return 0;}
+    public Integer cantidadPrestamos(Libro libro){return libro.getNumeroDeEjemplaresPrestados();}
 
-    public void agregarLibro(){}
-
-    public void agregarEjemplar(){}
 }
