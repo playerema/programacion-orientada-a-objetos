@@ -10,6 +10,7 @@ public class Alquiler {
     public Alquiler(Cliente cliente,Presupuesto presupuesto){
         this.cliente=cliente;
         this.cliente.agregarAlquiler(this);
+
         this.presupuesto=presupuesto;
     }
 

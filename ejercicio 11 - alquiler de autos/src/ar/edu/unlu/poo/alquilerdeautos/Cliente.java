@@ -6,7 +6,9 @@ public class Cliente {
     private String nombre;
     private int dni;
 
-    private ArrayList<Alquiler> alquileres;
+    public Cliente(String nombre){this.nombre=nombre;}
+
+    private ArrayList<Alquiler> alquileres=new ArrayList<Alquiler>();
 
     public Float montoTotalAlquileres(){
         Float monto = 0.0f;

@@ -16,7 +16,25 @@ public class Presupuesto {
 
     public int diasAlquilado(){return (int) ChronoUnit.DAYS.between(inicioAlquiler, finalAlquiler);}
 
-    public int generarSaldo(){return vehiculo.generarPresupuesto();}
+    public int generarSaldo(){
+        vehiculo.setDiasDeAlquiler(diasAlquilado());
+        return vehiculo.generarPresupuesto();}
 
     public Alquiler generarAlquiler(Cliente cliente){return new Alquiler(cliente,this);}
+
+    public LocalDate getInicioAlquiler() {
+        return inicioAlquiler;
+    }
+
+    public void setInicioAlquiler(LocalDate inicioAlquiler) {
+        this.inicioAlquiler = inicioAlquiler;
+    }
+
+    public LocalDate getFinalAlquiler() {
+        return finalAlquiler;
+    }
+
+    public void setFinalAlquiler(LocalDate finalAlquiler) {
+        this.finalAlquiler = finalAlquiler;
+    }
 }

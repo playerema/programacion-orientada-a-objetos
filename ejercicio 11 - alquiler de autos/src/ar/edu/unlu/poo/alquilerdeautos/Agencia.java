@@ -17,12 +17,9 @@ public class Agencia {
 
     private static Agencia agencia;
 
-    private ArrayList<Vehiculo> vehiculosDisponibles;
+    private ArrayList<Vehiculo> vehiculosDisponibles=new ArrayList<Vehiculo>();
 
-    private Agencia(){
-        this.vehiculosDisponibles=new ArrayList<Vehiculo>();
-    }
-
+    private ArrayList<Cliente> clientes=new ArrayList<Cliente>();
 
     public static Agencia getAgencia() {
         if (agencia == null) {
@@ -56,5 +53,15 @@ public class Agencia {
     public Presupuesto emitirPresupuesto(Vehiculo vehiculo,LocalDate inicioAlquiler,LocalDate finalAlquiler){
         Presupuesto presupuesto = new Presupuesto(vehiculo,inicioAlquiler,finalAlquiler);
         return presupuesto;
+    }
+
+    public Float totalDeAlquileres(){
+        Float respuesta = 0.0f;
+
+        for(int i =0;i<clientes.size();i++){
+            respuesta= respuesta + clientes.get(i).montoTotalAlquileres();
+        }
+
+        return respuesta;
     }
 }
