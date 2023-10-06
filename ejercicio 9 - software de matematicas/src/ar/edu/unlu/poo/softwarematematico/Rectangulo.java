@@ -1,8 +1,8 @@
 package ar.edu.unlu.poo.softwarematematico;
 
-public class Rectangulo extends FiguraDosDimensiones{
-    public Double base;
-    public Double altura;
+public class Rectangulo extends FiguraDosDimensiones {
+    protected Double base;
+    protected Double altura;
 
     public Rectangulo(Double base, Double altura){
         this.base=base;
@@ -10,7 +10,12 @@ public class Rectangulo extends FiguraDosDimensiones{
     }
 
     @Override
-    public Double GetArea() {
+    public Double getPerimetro() {
+        return 2*base+2*altura;
+    }
+
+    @Override
+    public Double getArea() {
         return base*altura;
     }
 

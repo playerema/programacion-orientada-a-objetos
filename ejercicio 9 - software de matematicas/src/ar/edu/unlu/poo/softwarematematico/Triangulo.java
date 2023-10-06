@@ -1,8 +1,8 @@
 package ar.edu.unlu.poo.softwarematematico;
 
-public class Triangulo extends FiguraDosDimensiones{
-    public Double base;
-    public Double altura;
+public class Triangulo extends FiguraDosDimensiones {
+    private Double base;
+    private Double altura;
 
     public Triangulo(Double base, Double altura){
         this.base=base;
@@ -10,7 +10,7 @@ public class Triangulo extends FiguraDosDimensiones{
     }
 
     @Override
-    public Double GetArea() {
+    public Double getArea() {
         return (base*altura)/2;
     }
 
@@ -21,4 +21,9 @@ public class Triangulo extends FiguraDosDimensiones{
     public void setAltura(Double altura){this.altura=altura;}
 
     public Double getAltura(){return this.altura;}
+
+    @Override
+    public Double getPerimetro() {
+        return base + altura + Math.pow((base*base)+(altura*altura),0.5);
+    }
 }

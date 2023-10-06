@@ -1,24 +1,47 @@
 package ar.edu.unlu.poo.softwarematematico;
 
-public class Cuadrado extends FiguraDosDimensiones{
-    public Double lado1;
-    public Double lado2;
+public class Cuadrado extends Rectangulo {
 
-    public Cuadrado(Double lado1, Double lado2){
-        this.lado1 =lado1;
-        this.lado2 =lado2;
+    public Cuadrado(Double lado){
+        super(lado,lado);
+        this.base =lado;
     }
 
     @Override
-    public Double GetArea() {
-        return lado1 * lado2;
+    public Double getArea() {
+        return base * base;
     }
 
-    public void setLado1(Double lado){this.lado1=lado;}
+    public void setLado(Double lado){this.setBase(lado);}
 
-    public Double getLado1(){return this.lado1;}
+    public Double getLado(){return this.base;}
 
-    public void setLado2(Double lado){this.lado2=lado;}
+    @Override
+    public Double getPerimetro() {
+        return base *4;
+    }
 
-    public Double getLado2(){return this.lado2;}
+    @Override
+    public Double getBase() {
+        return super.getBase();
+    }
+
+    @Override
+    public Double getAltura() {
+        return super.getAltura();
+    }
+
+    @Override
+    public void setBase(Double base) {
+        super.setBase(base);
+        this.altura=base;
+    }
+
+    @Override
+    public void setAltura(Double base) {
+        super.setBase(base);
+        this.altura=base;
+    }
+
+
 }

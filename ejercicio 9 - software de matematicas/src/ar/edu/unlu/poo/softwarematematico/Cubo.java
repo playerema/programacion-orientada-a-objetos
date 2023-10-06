@@ -6,7 +6,7 @@ public class Cubo extends FiguraTresDimensiones{
     public Cubo(Double arista){this.arista=arista;}
 
     @Override
-    public Double GetArea() {
+    public Double getArea() {
         return 6*Math.pow(arista,2.0d);
     }
 

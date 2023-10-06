@@ -5,10 +5,9 @@ public class Esfera extends FiguraTresDimensiones {
 
     public Esfera(Double radio){this.radio=radio;}
 
+
     @Override
-    public Double getArea(){
-        return 4*Math.PI*Math.pow(radio,2.0d);
-    }
+    public Double getArea() {return 4*Math.PI*Math.pow(radio,2.0d);}
 
     @Override
     public Double getVolumen(){

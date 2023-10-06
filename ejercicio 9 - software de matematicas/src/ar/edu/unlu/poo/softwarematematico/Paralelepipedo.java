@@ -13,7 +13,7 @@ public class Paralelepipedo extends FiguraTresDimensiones {
     }
 
     @Override
-    public Double getArea(){
+    public Double getArea() {
         return 2*(arista1*arista2+arista1*arista3+arista2*arista3);
     }
 

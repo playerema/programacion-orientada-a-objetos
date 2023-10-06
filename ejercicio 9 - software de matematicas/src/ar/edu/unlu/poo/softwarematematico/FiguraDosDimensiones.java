@@ -1,7 +1,7 @@
 package ar.edu.unlu.poo.softwarematematico;
 
-public class FiguraDosDimensiones {
-    public Double GetArea(){
-        return 0.0d;
-    }
+public abstract class FiguraDosDimensiones extends Figura{
+
+    public abstract Double getPerimetro();
+    public abstract Double getArea();
 }
